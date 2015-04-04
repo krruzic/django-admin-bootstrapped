@@ -143,10 +143,12 @@ td.action-checkbox {
     margin-top: 8px;
 }
 
-/*#content-navbar-collapse .btn-primary:hover,
+#content-navbar-collapse .btn-primary:hover,
 #content-navbar-collapse .btn-primary:focus {
-    background-color: #265a88;
-}*/
+  color: #ffffff;
+  background-color: #0f6f2e;
+  border-color: #0b4f21;
+}
 
 .form-control-inline {
     width: auto;
