@@ -1,13 +1,40 @@
-{% extends "admin/base_site.html" %}
-{% load url from future %}{% load i18n %}
+{% load staticfiles %}
 
-{% block breadcrumbs %}
-{% endblock %}
 
-{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css"/>
+<script type="text/javascript" src={% static '/static/js/jquery-2.1.3.min.js' %}></script>
+<script type="text/javascript" src={% static '/static/js/bootstrap.min.js' %}></script>
 
-<p>{% trans "Thanks for spending some quality time with the Web site today." %}</p>
+<style type="text/css">
 
-<p><a href="/simpleMilitary/" class="btn btn-default pull-center">{% trans 'Go Home' %}</a></p>
+form[role=login] {
+  color: #5d5d5d;
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+  form[role=login] > div {
+    margin: 10px;
+  }
+  form[role=login] #submit {
+    font-size: 14px;
+    margin: 0 10px;
+  }
 
-{% endblock %}
+</style>
+<title>Logged out</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8">
+{% include "navbar.html" with properties=properties %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+    <h2>{{ request.user.username }} logged out successfully!</h2>
+    <p><a href="/simpleMilitary/" class="btn btn-default pull-center">{% trans 'Go Home' %}</a></p>
+    </div>
+  </div>
+</div>
